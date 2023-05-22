@@ -3,11 +3,12 @@
 1. 使用原始socket()实现一个B/S架构的服务端；
  要求：从浏览器发送请求，服务器固定回复下面简单的HTML消息给浏览器
 显示；
- <html><head><title>testHTML</title></head>
- <body>
- <h2>this is test HTML</h2>
- </body>
- </html>
+
+// <html><head><title>testHTML</title></head>
+// <body>
+// <h2>this is test HTML</h2>
+// </body>
+// </html>
  
 【实验题目2，必选】 ---->  pythonProject
 2. 使用select方式实现一个C/S架构的应用；
