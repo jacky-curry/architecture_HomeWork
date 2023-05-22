@@ -5,10 +5,10 @@
 显示；
 
 > html><head><title>testHTML</title></head>
-<body>
-<h2>this is test HTML</h2>
-</body>
-</html>
+> <body>
+> <h2>this is test HTML</h2>
+> </body>
+> </html>
  
 
 【实验题目2，必选】 ---->  pythonProject
