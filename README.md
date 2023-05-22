@@ -4,12 +4,13 @@
  要求：从浏览器发送请求，服务器固定回复下面简单的HTML消息给浏览器
 显示；
 
-// <html><head><title>testHTML</title></head>
-// <body>
-// <h2>this is test HTML</h2>
-// </body>
-// </html>
+> html><head><title>testHTML</title></head>
+<body>
+<h2>this is test HTML</h2>
+</body>
+</html>
  
+
 【实验题目2，必选】 ---->  pythonProject
 2. 使用select方式实现一个C/S架构的应用；
  要求：服务器同时支持多个客户端连接，一个客户端发送消息，服务器回复
