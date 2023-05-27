@@ -3,7 +3,7 @@
 
 1. 使用原始socket()实现一个B/S架构的服务端；
  要求：从浏览器发送请求，服务器固定回复下面简单的HTML消息给浏览器
- 显示；
+  显示；
 
 > html><head><title>testHTML</title></head>
 > <body>
@@ -17,7 +17,7 @@
 
 2. 使用select方式实现一个C/S架构的应用；
  要求：服务器同时支持多个客户端连接，一个客户端发送消息，服务器回复
- 一个XML消息（内容不限）；
+  一个XML消息（内容不限）；
 
 
 【实验题目3，必选，3选1】 ----> lab3
@@ -52,11 +52,11 @@
 
 服务端：
 
-![image-20230527134235530](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527134235530.png)
+![image-20230527134235530](.\picture\image-20230527134235530.png)
 
 客户端：
 
-![image-20230527134310257](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527134310257.png)
+![image-20230527134310257](.\picture\image-20230527134310257.png)
 
 ## 实验二
 
@@ -66,15 +66,15 @@
 
 1. 运行运行服务端，绑定的是本地的8081端口，不断循环读取inputs，如果有输入的话，就会返回给客户端一段xml
 
-![image-20230527134803898](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527134803898.png)
+![image-20230527134803898](.\picture\image-20230527134803898.png)
 
 
 
 2. 运行客户端，每个3s发送一段msg，发送20次之后就会结束，每次发送服务端都会响应一段xml
 
-![image-20230527135109227](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527135109227.png)
+![image-20230527135109227](.\picture\image-20230527135109227.png)
 
-![image-20230527135144500](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527135144500.png)
+![image-20230527135144500](.\picture\image-20230527135144500.png)
 
 
 
@@ -88,11 +88,11 @@ springboot2.7.5
 
 1. 运行springboot项目启动类，我们这里是绑定的本地的8080端口。并且写了一个restful的GET接口，路径为 localhost:8080/test
 
-![image-20230527135955071](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527135955071.png)
+![image-20230527135955071](.\picture\image-20230527135955071.png)
 
 2. 使用浏览器进行访问，可以得到对应的JSON字符串
 
-![image-20230527140253624](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527140253624.png)
+![image-20230527140253624](.\picture\image-20230527140253624.png)
 
 
 
@@ -128,7 +128,7 @@ docker run \
 
 如图：
 
-![image-20230527140818666](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527140818666.png)
+![image-20230527140818666](.\picture\image-20230527140818666.png)
 
 
 
@@ -136,7 +136,7 @@ docker run \
 
 我们先在对应模块中，把application.yml配置好
 
-![image-20230527143527262](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527143527262.png)
+![image-20230527143527262](.\picture\image-20230527143527262.png)
 
 我这里使用的是AMQP框架，只需要通过注解@RabbitListener(queues = "simple.queue")就可以把一个消费者与一个队列进行绑定。
 
@@ -144,17 +144,17 @@ docker run \
 
 我这里绑定了两个消费者，并且两个消费者的消费速度是不一样的，通过sleep来模拟控制两个消费者的消费速度。消费者1 会比 消费者2 消费速度更快
 
-![image-20230527143358048](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527143358048.png)
+![image-20230527143358048](.\picture\image-20230527143358048.png)
 
 
 
 3. 启动生产者服务，通过Test方法进行消息的模拟发送，我这里是会发送50条位置信息，每个20毫秒发送一条。
 
-![image-20230527143655760](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527143655760.png)
+![image-20230527143655760](.\picture\image-20230527143655760.png)
 
 4. 发送之后，可以在消费者端看到接收到消息，消费者1的处理速度明显比消费者2的快。
 
-![image-20230527143910602](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527143910602.png)
+![image-20230527143910602](.\picture\image-20230527143910602.png)
 
 
 
@@ -162,7 +162,7 @@ docker run \
 
 5. 如果想看到RabbitMQ的管理界面，可以访问http://127.0.0.1:15672/)，可以看到对应的队列信息等
 
-![image-20230527141411550](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20230527141411550.png)
+![image-20230527141411550](.\picture\image-20230527141411550.png)
 
 
 
