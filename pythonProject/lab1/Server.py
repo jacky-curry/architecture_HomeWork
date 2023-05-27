@@ -26,7 +26,5 @@ if __name__ == '__main__':
         clientsocket, address = server.accept()
         # 接收消息
         print('Client connect', address)
-        # data = clientsocket.recv(1024)
-        # clientsocket.send()
         handle_req(clientsocket)
 

@@ -24,7 +24,7 @@ def start_server(port):
             else:
                 data = s.recv(1024)        # 故意设置的这么小
                 if data:
-                    # 已经从这个socket当中收到数据, 如果你想写, 那么就将其加入到outputs中, 等到select模型检查它是否可写
+                    # 已经从这个socket当中收到数据, 如果想写, 那么就将其加入到outputs中, 等到select模型检查它是否可写
                     print(data.decode(encoding='utf-8'))
                     if s not in outputs:
                         outputs.append(s)
